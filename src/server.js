@@ -1,7 +1,7 @@
 const amqp = require('amqplib/callback_api');
 const { envs } = require(`./config/${process.env.NODE_ENV || 'default'}.js`);
 
-amqp.connect(`amqp://${envs.SERVER_IP}`, function(error0, connection) {
+amqp.connect(`amqp://${envs.SERVER_USERNAME}:${envs.SERVER_PASSWORD}@${envs.SERVER_IP}`, function(error0, connection) {
     if (error0) {
         throw error0;
     }
