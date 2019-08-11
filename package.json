@@ -1,19 +1,21 @@
 {
-  "scripts": {
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "dependencies": {
-    "amqplib": "^0.5.5"
-  },
-  "devDependencies": {
-    "husky": "^3.0.3",
-    "lint-staged": "^9.2.1",
-    "prettier": "^1.18.2"
-  }
+    "scripts": {
+        "dev": "nodemon src/server.js",
+        "precommit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.js": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "dependencies": {
+        "amqplib": "^0.5.5",
+        "nodemon": "^1.19.1"
+    },
+    "devDependencies": {
+        "husky": "^3.0.3",
+        "lint-staged": "^9.2.1",
+        "prettier": "^1.18.2"
+    }
 }
