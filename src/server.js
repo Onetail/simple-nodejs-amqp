@@ -19,4 +19,8 @@ amqp.connect(`amqp://${envs.SERVER_USERNAME}:${envs.SERVER_PASSWORD}@${envs.SERV
         channel.sendToQueue(queue, Buffer.from(msg));
         console.log(' [x] Sent %s', msg);
     });
+    setTimeout(() => {
+        connection.close();
+        process.exit(0);
+    }, envs.CONNECT_TIMEOUT);
 });
