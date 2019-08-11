@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  stats:
+    image: bitnami/rabbitmq:latest
+    ports:
+      - 20195:15672
+      - 5672:5672
+    environment:
+      - RABBITMQ_USERNAME=root
+      - RABBITMQ_PASSWORD=root
+      - RABBITMQ_NODE_TYPE=stats
+      - RABBITMQ_NODE_NAME=rabbit@stats
+      - RABBITMQ_ERL_COOKIE=s3cr3tc00ki3
+    volumes:
+      - 'rabbitmqstats_data:/bitnami'
+
+volumes:
+  rabbitmqstats_data:
+    driver: local
