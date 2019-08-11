@@ -1,0 +1,12 @@
+# mac os file 
+
+.DS_Store
+
+# some file for local test
+
+node_modules/
+
+# lock 
+*.lock
+
+package-lock.json
