@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "amqplib": "^0.5.5"
+  },
+  "devDependencies": {
+    "husky": "^3.0.3",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2"
+  }
+}
