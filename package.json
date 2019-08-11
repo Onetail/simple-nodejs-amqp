@@ -1,6 +1,7 @@
 {
     "scripts": {
         "dev": "nodemon src/server.js",
+        "start": "NODE_ENV=prod nodemon src/server.js",
         "precommit": "lint-staged"
     },
     "lint-staged": {
