@@ -2,9 +2,9 @@ version: '2'
 
 services:
   stats:
-    image: bitnami/rabbitmq:latest
+    image: bitnami/rabbitmq
     ports:
-      - 20195:15672
+      - 15672:15672
       - 5672:5672
     environment:
       - RABBITMQ_USERNAME=root
