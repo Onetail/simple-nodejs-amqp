@@ -1,8 +1,8 @@
 version: '2'
 
 services:
-  stats:
-    image: bitnami/rabbitmq
+  rabbitmq:
+    image: bitnami/rabbitmq:latest
     ports:
       - 15672:15672
       - 5672:5672
@@ -10,11 +10,17 @@ services:
       - RABBITMQ_USERNAME=root
       - RABBITMQ_PASSWORD=root
       - RABBITMQ_NODE_TYPE=stats
-      - RABBITMQ_NODE_NAME=rabbit@stats
-      - RABBITMQ_ERL_COOKIE=s3cr3tc00ki3
+      - RABBITMQ_NODE_NAME=rabbit@rabbitmq
+      # - RABBITMQ_ERL_COOKIE=s3cr3tc00ki3
     volumes:
       - 'rabbitmqstats_data:/bitnami'
+    networks: 
+      - backend
 
 volumes:
   rabbitmqstats_data:
     driver: local
+
+networks: 
+  backend:
+    driver: bridge
