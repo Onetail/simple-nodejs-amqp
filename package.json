@@ -1,7 +1,8 @@
 {
     "scripts": {
         "dev": "nodemon src/server.js",
-        "start": "NODE_ENV=prod nodemon src/server.js",
+        "serve": "NODE_ENV=prod nodemon src/server.js",
+        "cli": "NODE_ENV=default nodemon src/client.js",
         "lint": "eslint --fix src/*.js",
         "precommit": "lint-staged",
         "prettier": "prettier --write src/**/**.{js,jsx}"
