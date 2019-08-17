@@ -1,12 +1,12 @@
 {
-    "files": ["src/**/*.js"],
-    "parser": "babel-flow",
-    "printWidth": 120,
-    "tabWidth": 4,
-    "semi": true,
-    "trailingComma": "all",
-    "jsxBracketSameLine": false,
-    "arrowParens": "avoid",
-    "bracketSpacing": true,
-    "singleQuote": true
+	"files": ["src/**/*.js"],
+	"parser": "babel-flow",
+	"printWidth": 120,
+	"tabWidth": 4,
+	"semi": true,
+	"trailingComma": "es5",
+	"jsxBracketSameLine": false,
+	"arrowParens": "avoid",
+	"bracketSpacing": true,
+	"singleQuote": true
 }
