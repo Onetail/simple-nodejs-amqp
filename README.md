@@ -10,10 +10,19 @@
 ``` password = root ```
 
 ### start server 
-``` yarn dev ```
+``` yarn dev:js ```
 
 ### receive server 
 ``` yarn cli ```
+
+### use webpack
+> build a dist to add compiler speed faster
+
+``` yarn build ```
+
+> open another terminal 
+
+``` yarn dev ```
 
 ## clean volume
 ``` docker volume ls -q | grep rabbitmq ```
