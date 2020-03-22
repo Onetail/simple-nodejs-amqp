@@ -1,5 +1,7 @@
 # Simple Amqp Server 
 
+## Quick start
+
 ### Build amqp docker server 
 ``` docker-compose up ```
 
@@ -15,7 +17,7 @@
 ### receive server 
 ``` yarn cli ```
 
-### use webpack
+## use webpack
 > build a dist to add compiler speed faster
 
 ``` yarn build ```
